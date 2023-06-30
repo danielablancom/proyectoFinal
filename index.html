@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Simuador de viajes</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="text-center">Calcule el presupuesto de su viaje</h1>
+      </div>
+
+      <div>
+        <div>
+          <h3>Fitrar por precio</h3>
+          <label for="min">
+            Mín $
+            <input type="number" name="min" id="min" min="0" maxlength="6">
+          </label>
+          <label for="max">
+            Máx $ 
+            <input type="number" name="max" id="max" max="300000" maxlength="6">
+          </label>
+          <label for="text">
+            Ingresa país de destino
+            <input type="text" name="text" id="text">
+          </label>
+
+          <div id="balance"></div>
+  
+          <div id="resultado"></div>
+          <input type="submit" value="filtrar" class="btn btn-dark" id="filtro">
+          <input type="submit" value="borrar" class="btn btn-dark" id="borrarBusqueda">
+        </div>
+<div class="container p-2">
+      <form id="travelCalc">
+        <label for="viaje">
+            Ingresa presupuesto de viaje
+            <input type="number" name="text" id="viaje">
+          </label>
+          <label for="transporte">
+            Ingresa presupuesto para transporte
+            <input type="number" name="text" id="transporte">
+          </label>
+          <label for="comida">
+            Ingresa presupuesto para comida
+            <input type="number" name="text" id="comida">
+          </label>
+          <label for="hospedaje">
+            Ingresa presupuesto para hospedaje
+            <input type="number" name="text" id="hospedaje">
+          </label>
+          <input type="submit" value="Calcular presupuesto" class="btn btn-dark">
+        </form>
+          <div id="div"></div>
+     
+        </div>
+        <div id="items" class="row">
+        </div>
+      </div>
+
+      <div>
+        <h4>Tu carrito:</h4>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre Paquete</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="carrito-items">
+          </tbody>
+        </table>
+        <h4 id="total">Total a pagar $:</h4>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="paquetes.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
